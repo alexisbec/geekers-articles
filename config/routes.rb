@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  resources :articles
-  resources :users
+  resources :users, only: [:new, :create]
   resources :sessions, only: [:new, :create, :destroy]
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :categories, only: [:show]
+  resources :articles do
+    post '/vote/', to: 'votes#create'
+    delete '/vote/', to: 'votes#destroy'
+  end
 
   root 'articles#index'
 end
