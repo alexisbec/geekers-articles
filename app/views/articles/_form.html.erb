@@ -12,31 +12,29 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-input' %>
   </div>
 
   <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
+    <%= form.label :text, class: 'form-label' %>
+    <%= form.text_area :text, class: 'text-input' %>
   </div>
 
   <div class="field">
-    <%= form.label :author_id %>
-    <%= form.number_field :author_id %>
+    <%= form.hidden_field :author_id, value: current_user.id %>
   </div>
 
   <div class="field">
-    <%= form.label :category_id %>
-    <%= form.number_field :category_id %>
+    <%= form.hidden_field :category_id, class: 'form-label' %>
+    <%= form.hidden_field :category_id, value: 5 %>
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
+    <%= form.hidden_field :image %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit 'Create Article', class: 'btn-1' %>
   </div>
 <% end %>

@@ -38,7 +38,7 @@ nav {
   color: #ff8426;
   margin: 0 3em;
   font-weight: 800;
-  font-size: 1.1em;
+  font-size: 1.3em;
 }
 
 .nav-li a:hover {
@@ -75,6 +75,14 @@ nav {
   border-radius: 4px;
   width: 35em;
   height: 2.5em;
+  margin: 1.6em 0;
+}
+
+.text-input {
+  border: none;
+  border-radius: 4px;
+  width: 35em;
+  height: 25em;
   margin: 1.6em 0;
 }
 
