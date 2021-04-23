@@ -1,8 +1,8 @@
-<h1 class="text-center">Log in</h1>
+<h1 class="title">Log in</h1>
 
 <%= form_for(:session, url: sessions_path, method: 'POST' ) do |f| %>
-  <div class="form-group">
-    <%= f.text_field :user, autofocus: true, placeholder: "Enter your name" , class: "form-control" %>
+  <div>
+    <%= f.text_field :user, autofocus: true, placeholder: "Enter your name" %>
   </div>
   <div class="actions">
     <%= f.submit 'Login' %>

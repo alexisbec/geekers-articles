@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Articles</h1>
+<h1 class="title">Articles</h1>
 
 <table>
   <thead>
@@ -14,7 +14,7 @@
   </thead>
 
   <tbody>
-    <% @articles.each do |article| %>
+    <% @articles.each do | article | %>
       <tr>
         <td><%= article.title %></td>
         <td><%= article.text %></td>
@@ -28,7 +28,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Article', new_article_path %>
