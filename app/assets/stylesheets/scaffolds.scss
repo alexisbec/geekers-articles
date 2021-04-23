@@ -1,10 +1,14 @@
 body {
-  background-color: #fff;
+  background-color: #baaf92;
   color: #333;
   scroll-behavior: smooth;
   margin: 0;
   overflow-x: hidden;
   font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 pre {

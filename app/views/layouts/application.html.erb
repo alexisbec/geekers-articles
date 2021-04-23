@@ -22,9 +22,6 @@
         <%= link_to "Categories", categories_path %>
       </div>
       <% if logged_in? %>
-      <div class="nav-li">
-        <%= link_to "Create Article", new_article_path %>
-      </div>
       <div class="nav-ul">
         <div class="nav-li">
           <%= link_to(current_user.name, user_path(current_user.id)) %>
@@ -45,6 +42,7 @@
       <% end %>
     </nav>
 
-    <%= yield %>
+      <%= yield %>
+
   </body>
 </html>

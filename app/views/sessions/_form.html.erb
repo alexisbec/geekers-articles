@@ -1,0 +1,9 @@
+<%= form_for(:session, url: sessions_path, method: 'POST' ) do |form| %>
+  <div class="field">
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :user, placeholder: "Enter your name", class: 'form-input' %>
+  </div>
+  <div class="actions">
+    <%= form.submit 'Log In', class: 'btn-1' %>
+  </div>
+<% end %>
