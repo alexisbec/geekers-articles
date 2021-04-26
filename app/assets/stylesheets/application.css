@@ -114,11 +114,38 @@ nav {
   text-decoration: none;
 }
 
+.btn-1 a {
+  text-decoration: none;
+  color: #f2eee3;
+}
+
 .btn-1:hover {
   background-color: #994708;
   cursor: pointer;
   transition: 0.5s;
   font-size: 1.2em;
+}
+
+.btn-2 {
+  border: 2px solid #ff8426;
+  border-radius: 4px;
+  padding: 0.7em 3em;
+  color: #f2eee3;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 5em;
+  text-decoration: none;
+}
+
+.btn-2:hover {
+  background-color: #ff8426;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 1.2em;
+}
+
+.art-opt {
+  margin-top: 5em;
 }
 
 /* ---------- Articles Index ---------- */

@@ -20,8 +20,12 @@
   <%= @article.category.name %>
 </p>
 
-<% if current_user == @article.author %>
-  <%= link_to 'Edit', edit_article_path(@article) %>
-<% end %>
-<%= vote_btn(@article) %>
-<%= link_to 'Back', articles_path %>
+<span class="btn-1"><%= vote_btn(@article) %></span>
+
+<div class="art-opt">
+  <%= link_to 'Back', articles_path, class: 'btn-2' %>
+
+  <% if current_user == @article.author %>
+    <%= link_to 'Edit', edit_article_path(@article), class: 'btn-2' %>
+  <% end %>
+</div>
