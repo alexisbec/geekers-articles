@@ -7,4 +7,8 @@ module ApplicationHelper
       link_to('Vote!', article_vote_path(article_id: article.id), method: :post)
     end
   end
+
+  def logged_in?
+    !current_user.nil?
+  end
 end

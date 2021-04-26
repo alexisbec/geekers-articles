@@ -2,7 +2,14 @@
 
 <div class="grid-cont">
   <div class="grid-ele grid_1">
-    
+    <%= link_to article_path(@top_article.id) do %>
+          <h3 class="orange">
+            <%= @top_article.title %>
+          </h3>
+          <h6 class="text-nowrap">
+            <%= @top_article.text %>
+          </h6>
+    <% end %>
   </div>
   <div class="grid-ele grid_2">
     
