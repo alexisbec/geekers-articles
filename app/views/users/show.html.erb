@@ -6,12 +6,16 @@
 </h1>
 
 <% if @articles %>
-    <article>
-      <h3>Recent articles:</h3>
-      <ul class="posts">
-        <%= render @articles %>
-      </ul>
-    </article>
+  <h3>Recent articles:</h3>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+      <%= article.title %><br>
+      <%= article.text %><br>
+      <%= article.category.name %><br>
+      </li>
+    <% end %>
+  </ul>
 <% end %>
 
 <%= link_to 'New Article', new_article_path, class: 'btn-1' %>
