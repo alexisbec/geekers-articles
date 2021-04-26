@@ -5,4 +5,13 @@
   <%= @user.name %>
 </h1>
 
-<%= link_to 'New Article', new_article_path %>
+<% if @articles %>
+    <article>
+      <h3>Recent articles:</h3>
+      <ul class="posts">
+        <%= render @articles %>
+      </ul>
+    </article>
+<% end %>
+
+<%= link_to 'New Article', new_article_path, class: 'btn-1' %>

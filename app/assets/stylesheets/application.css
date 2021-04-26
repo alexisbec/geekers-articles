@@ -23,6 +23,7 @@ nav {
   align-items: center;
   position: fixed;
   top: 0;
+  z-index: 100;
 }
 
 .nav-ul {
@@ -63,6 +64,10 @@ nav {
 }
 
 /* ---------- Forms ---------- */
+
+.form {
+  margin-bottom: 3em;
+}
 
 .form-label {
   color: #785e4d;
@@ -106,6 +111,7 @@ nav {
   font-weight: bold;
   font-size: 1em;
   margin: 0 auto;
+  text-decoration: none;
 }
 
 .btn-1:hover {

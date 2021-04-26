@@ -1,0 +1,5 @@
+<% current_user.articles.each do |article| %>
+  <%= article.title %>
+  <%= article.text %>
+  <%= article.category.name %>
+<% end %>
