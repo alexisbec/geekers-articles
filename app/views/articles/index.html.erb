@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="grid-cont">
-  <div class="grid-ele grid_1">
+  <div class="grid_1">
     <%= link_to article_path(@top_article.id) do %>
       <%= image_tag @top_article.image.downcase, class:'cover-img full' %>
           <div class="top-cont">
@@ -11,21 +11,49 @@
           </div>
     <% end %>
   </div>
-  <div class="grid-ele grid_2">
-    
+  <div class="grid_2">
+    <h3 class="index-title sec-cont">
+      <%= @categories.find(1).name %>
+    </h3>
   </div>
-  <div class="grid-ele grid_3">
-    
+  <div class="grid_3">
+    <h3 class="index-title third-cont">
+      <%= @categories.find(2).name %>
+    </h3>
   </div>
-  <div class="grid-ele grid_4">
-    
+  <div class="grid_4">
+    <h3 class="index-title third-cont">
+      <%= @categories.find(3).name %>
+    </h3>
   </div>
-  <div class="grid-ele grid_5">
-    
+  <div class="grid_5">
+    <h3 class="index-title third-cont">
+      <%= @categories.find(4).name %>
+    </h3>
   </div>
-  <div class="grid-ele grid_6">
-    
+  <div class="grid_6">
+    <h3 class="index-title third-cont">
+      <%= @categories.find(5).name %>
+    </h3>
   </div>
+</div>
+
+
+<div>
+  <% @categories.each do |c| %>
+    <% if !c.articles.last.nil? %>
+      <div class="my-card ">
+        <%= link_to article_path(c.articles.last.id) do %>
+            <h3 class="my-card-cat">
+              <%= c.name %>
+            </h3>
+            <h4>
+              <%= c.articles.last.title %>
+            </h4>
+          <% end %>
+      </div>
+    <% end %>
+  <% end %>
 </div>
 
 <ul>
