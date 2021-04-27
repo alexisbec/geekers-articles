@@ -33,7 +33,8 @@
   </div>
 
   <div class="field">
-    <%= form.hidden_field :image %>
+    <%= form.label :image %>
+    <%= select_tag "article[#{:image}]", options_for_select(["movies_bg", "music_bg", "sports_bg"]), include_blank: true %>
   </div>
 
   <div class="actions">

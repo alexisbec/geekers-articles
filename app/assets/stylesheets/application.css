@@ -152,35 +152,54 @@ nav {
 
 .grid-cont {
   margin: 3.5em 0;
-  height: 95vh;
   width: 100vw;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-template-areas: 
-    'principal principal secondary'
-    'principal principal secondary'
-    'article_3 article_4 article_5';
+    'principal principal principal secondary'
+    'principal principal principal secondary'
+    'article_3 article_4 article_5 article_6';
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.top-cont {
+  position: absolute;
+  bottom: 3em;
+  left: 3em;
+  z-index: 100000;
+}
+
+.index-title {
+  font-size: 4em;
+  font-weight: 700;
+  color: #ff8426;
 }
 
 .grid_1 {
   position: relative;
   grid-area: principal;
-  background: url(movies_bg.jpg);
   background-size: cover;
+  height: 90vh;
 }
 
 .grid_1::after,
 .grid_2::after,
 .grid_3::after,
 .grid_4::after,
-.grid_5::after {
+.grid_5::after,
+.grid_6::after {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 400px;
+  height: 200px;
   background: linear-gradient(360deg, #000, transparent);
   pointer-events: none;
 }
@@ -210,5 +229,12 @@ nav {
   position: relative;
   grid-area: article_5;
   background: url(tv_bg.jpg);
+  background-size: cover;
+}
+
+.grid_6 {
+  position: relative;
+  grid-area: article_6;
+  background: url(sports_bg.jpg);
   background-size: cover;
 }

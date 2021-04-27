@@ -3,12 +3,12 @@
 <div class="grid-cont">
   <div class="grid-ele grid_1">
     <%= link_to article_path(@top_article.id) do %>
-          <h3 class="orange">
-            <%= @top_article.title %>
-          </h3>
-          <h6 class="text-nowrap">
-            <%= @top_article.text %>
-          </h6>
+      <%= image_tag @top_article.image.downcase, class:'cover-img full' %>
+          <div class="top-cont">
+            <h3 class="index-title">
+              <%= @top_article.title %>
+            </h3>
+          </div>
     <% end %>
   </div>
   <div class="grid-ele grid_2">
@@ -21,6 +21,9 @@
     
   </div>
   <div class="grid-ele grid_5">
+    
+  </div>
+  <div class="grid-ele grid_6">
     
   </div>
 </div>
