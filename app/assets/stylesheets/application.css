@@ -239,7 +239,7 @@ nav {
   margin-top: 2em !important;
 }
 
-.categories-grid {
+.cat-index-grid {
   margin-top: 8.5em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -247,7 +247,7 @@ nav {
   grid-gap: 4em;
 }
 
-.grid-ele {
+.index-grid-ele {
   width: 7em;
   height: 4em;
   background: #ff8426;
@@ -261,7 +261,44 @@ nav {
   font-weight: 800;
 }
 
-.grid-ele:hover {
+.index-grid-ele:hover {
   transform: scale(1.1);
   transition: 0.5s;
+}
+
+/* ---------- Categories Show ---------- */
+
+.cat-show-body {
+  width: 50vw;
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+}
+
+.categories-ul {
+  list-style: none;
+  padding: 0;
+}
+
+.categories-li {
+  margin: 2em 0 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.art-title {
+  font-size: 2em;
+  font-weight: 800;
+  color: #994708;
+}
+
+.art-author {
+  font-size: 1.3em;
+  color: #f2eee3;
+  margin: 1em;
+  font-weight: 600;
 }

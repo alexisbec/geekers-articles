@@ -5,17 +5,19 @@
   <%= @user.name %>
 </h1>
 
+<%= link_to 'New Article', new_article_path, class: 'btn-1' %>
+
 <% if @articles %>
-  <h3>Recent articles:</h3>
-  <ul>
-    <% @articles.each do |article| %>
-      <li>
-      <%= article.title %><br>
-      <%= article.text %><br>
-      <%= article.category.name %><br>
+  <div class="cat-show-body">
+    <ul class="categories-ul">
+    <% @articles.each do | article | %>
+      <li class="categories-li">
+        <span class="art-title"><%= article.title %></span>
+        <span class="art-author">Written by: <%= article.author.name %></span>
+        <%= link_to "Watch all the article", article_path(article.id), class: 'btn-1' %>
       </li>
     <% end %>
-  </ul>
-<% end %>
+    </ul>
+  </div>
 
-<%= link_to 'New Article', new_article_path, class: 'btn-1' %>
+<% end %>

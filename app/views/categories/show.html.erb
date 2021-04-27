@@ -2,13 +2,14 @@
   <%= @category.name %>
 </h2>
 
-<ul>
+<div class="cat-show-body">
+  <ul class="categories-ul">
   <% @articles.each do | article | %>
-  <li>
-    <span><%= link_to(article.title, article_path(article.id)) %></span><br>
-    <span><%= article.text %></span><br>
-    <span><%= article.author.name %></span><br>
-    <span><%= article.category.name %></span><br>
-  </li>
+    <li class="categories-li">
+      <span class="art-title"><%= article.title %></span>
+      <span class="art-author">Written by: <%= article.author.name %></span>
+      <%= link_to "Watch all the article", article_path(article.id), class: 'btn-1' %>
+    </li>
   <% end %>
-</ul>
+  </ul>
+</div>

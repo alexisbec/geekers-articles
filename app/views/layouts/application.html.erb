@@ -24,6 +24,9 @@
       <% if logged_in? %>
       <div class="nav-ul">
         <div class="nav-li">
+          <%= link_to 'New Article', new_article_path %> 
+        </div>
+        <div class="nav-li">
           <%= link_to(current_user.name, user_path(current_user.id)) %>
         </div>
         <div class="nav-li">
