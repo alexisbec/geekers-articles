@@ -2,8 +2,8 @@ class Vote < ApplicationRecord
   validates :user_id, presence: true
   validates :article_id, uniqueness: { scope: :user_id }
 
-  belongs_to :user
-  belongs_to :article
+  belongs_to :user, dependent: :destroy
+  belongs_to :article, dependent: :destroy
 
   def self.most_voted
     articles_votes = Vote.group(:article_id).count

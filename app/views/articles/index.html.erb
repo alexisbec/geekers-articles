@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<div class="grid-cont">
+<div class="index-container">
   <div class="grid_1">
     <%= link_to article_path(@top_article.id) do %>
-      <%= image_tag @top_article.image.downcase, class:'cover-img full' %>
+      <%= image_tag @top_article.image.downcase, class:'cover-img' %>
           <div class="top-cont">
             <h3 class="index-title">
               <%= @top_article.title %>
@@ -11,50 +11,24 @@
           </div>
     <% end %>
   </div>
-  <div class="grid_2">
-    <h3 class="index-title sec-cont">
-      <%= @categories.find(1).name %>
-    </h3>
-  </div>
-  <div class="grid_3">
-    <h3 class="index-title third-cont">
-      <%= @categories.find(2).name %>
-    </h3>
-  </div>
-  <div class="grid_4">
-    <h3 class="index-title third-cont">
-      <%= @categories.find(3).name %>
-    </h3>
-  </div>
-  <div class="grid_5">
-    <h3 class="index-title third-cont">
-      <%= @categories.find(4).name %>
-    </h3>
-  </div>
-  <div class="grid_6">
-    <h3 class="index-title third-cont">
-      <%= @categories.find(5).name %>
-    </h3>
-  </div>
 </div>
 
 
-<div>
-  <% @categories.each do |c| %>
-    <% if !c.articles.last.nil? %>
-      <div class="my-card ">
-        <%= link_to article_path(c.articles.last.id) do %>
-            <h3 class="my-card-cat">
+<div class="cards-holder">
+  <% @home_articles.each do |c| %>
+  <%= link_to category_path(c.id) do %>
+    <% unless c.articles.last.nil? %>
+      <div class="grid_2">
+        <%= image_tag c.articles.last.image %>
+            <h3 class="index-title sec-cont">
               <%= c.name %>
             </h3>
-            <h4>
-              <%= c.articles.last.title %>
-            </h4>
           <% end %>
       </div>
     <% end %>
   <% end %>
 </div>
+
 
 <ul>
   <% @articles.each do | article | %>
@@ -63,7 +37,6 @@
     <span><%= article.text %></span><br>
     <span><%= article.author.name %></span><br>
     <span><%= article.category.name %></span><br>
-    <span><%= article.image %></span><br>
   </li>
   <% end %>
 </ul>
