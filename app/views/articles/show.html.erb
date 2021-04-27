@@ -20,7 +20,9 @@
   <%= @article.category.name %>
 </p>
 
-<span class="btn-1"><%= vote_btn(@article) %></span>
+<% if logged_in? %>
+  <span class="btn-1"><%= vote_btn(@article) %></span>
+<% end %>
 
 <div class="art-opt">
   <%= link_to 'Back', articles_path, class: 'btn-2' %>

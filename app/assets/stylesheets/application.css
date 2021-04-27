@@ -162,11 +162,31 @@ nav {
   object-fit: cover;
 }
 
+.trend span {
+  background: #ff8426;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 3em;
+  padding: 1em 1.5em;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 7px;
+  font-size: 1.3em;
+  font-weight: 700;
+  color: #f2eee3;
+}
+
 .top-cont {
   position: absolute;
   bottom: 3em;
   left: 3em;
   z-index: 1000;
+}
+
+.cards-holder {
+  display: flex;
+  width: 100vw;
+  height: 5em;
 }
 
 .sec-cont {
@@ -175,7 +195,6 @@ nav {
   left: 0.5em;
   z-index: 1000;
 }
-
 
 .index-title {
   font-size: 4em;
@@ -209,22 +228,40 @@ nav {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200px;
+  height: 300px;
   background: linear-gradient(360deg, #000, transparent);
   pointer-events: none;
 }
 
+/* ---------- Categories Index ---------- */
 
-
-
-.cards-holder {
-  display: flex;
-  width: 100vw;
-  height: 5em;
+.cat-title {
+  margin-top: 2em !important;
 }
 
-.cover-text {
-  position: relative;
-  bottom: 0;
-  color: white;
+.categories-grid {
+  margin-top: 8.5em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-gap: 4em;
+}
+
+.grid-ele {
+  width: 7em;
+  height: 4em;
+  background: #ff8426;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 2em;
+  color: #f2eee3;
+  font-size: 2em;
+  font-weight: 800;
+}
+
+.grid-ele:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
 }

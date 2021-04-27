@@ -1,3 +1,14 @@
 <h2 class="title">
   <%= @category.name %>
 </h2>
+
+<ul>
+  <% @articles.each do | article | %>
+  <li>
+    <span><%= link_to(article.title, article_path(article.id)) %></span><br>
+    <span><%= article.text %></span><br>
+    <span><%= article.author.name %></span><br>
+    <span><%= article.category.name %></span><br>
+  </li>
+  <% end %>
+</ul>
