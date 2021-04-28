@@ -15,20 +15,19 @@
       </div>
     <% end %>
   </div>
-</div>
 
-
-<div class="cards-holder">
-  <% @home_articles.each do |c| %>
-  <%= link_to category_path(c.id) do %>
-    <% unless c.articles.last.nil? %>
-      <div class="grid_2">
-        <%= image_tag c.articles.last.image %>
-          <h3 class="index-title sec-cont">
-            <%= c.name %>
-          </h3>
-      </div>
+  <div class="cards-holder">
+    <% @home_articles.each do |c| %>
+    <%= link_to category_path(c.id) do %>
+      <% unless c.articles.last.nil? %>
+        <div class="grid_2">
+          <%= image_tag c.articles.last.image %>
+            <h3 class="index-title sec-cont">
+              <%= c.name %>
+            </h3>
+        </div>
+      <% end %>
+      <% end %>
     <% end %>
-    <% end %>
-  <% end %>
+  </div>
 </div>

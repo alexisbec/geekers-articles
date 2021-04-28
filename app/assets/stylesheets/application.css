@@ -69,6 +69,20 @@ nav {
   margin-bottom: 3em;
 }
 
+.body-forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  margin-bottom: 8px;
+}
+
+.form-title {
+  color: #785e4d;
+  font-size: 3em;
+}
+
 .form-label {
   color: #785e4d;
   font-size: 1.5em;
@@ -153,6 +167,7 @@ nav {
 .index-container {
   margin-top: 3em !important;
   width: 100vw;
+  margin-bottom: 20em;
 }
 
 .cover-img {
@@ -240,7 +255,7 @@ nav {
 }
 
 .cat-index-grid {
-  margin-top: 8.5em;
+  margin: 8.5em 0 107px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(auto, 1fr);
@@ -270,16 +285,17 @@ nav {
 
 .cat-show-body {
   width: 50vw;
+  min-height: 55vh;
   margin-top: 2em;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   padding: 0;
 }
 
 .categories-ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .categories-li {
@@ -289,6 +305,8 @@ nav {
   align-items: center;
   flex-direction: column;
 }
+
+/* ---------- Users Show ---------- */
 
 .art-title {
   font-size: 2em;
@@ -301,4 +319,20 @@ nav {
   color: #f2eee3;
   margin: 1em;
   font-weight: 600;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  width: 100vw;
+  background: #785e4d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  bottom: 0;
+}
+
+footer div {
+  margin: 0 2em;
 }
