@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-
   def index
     @categories = Category.all
   end
@@ -9,8 +8,7 @@ class CategoriesController < ApplicationController
     @articles = @category.articles.includes(:votes).includes(:author).order(created_at: 'DESC')
   end
 
-  def edit
-  end
+  def edit; end
 
   private
 
