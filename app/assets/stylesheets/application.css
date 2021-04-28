@@ -211,7 +211,8 @@ option {
 }
 
 .cards-holder {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 100vw;
   height: 5em;
 }
@@ -231,7 +232,6 @@ option {
 
 .grid_1 {
   position: relative;
-  grid-area: principal;
   background-size: cover;
   height: 93vh;
 }
@@ -307,25 +307,67 @@ option {
 }
 
 .cat-index-grid {
-  margin: 8.5em 0 107px;
+  margin: 8.5em 0 110px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(auto, 1fr);
   grid-gap: 4em;
 }
 
+.cat-index-grid a:nth-child(1) {
+  background: url(sports_bg.png);
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cat-index-grid a:nth-child(2) {
+  background: url(videogames_bg.jpg);
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cat-index-grid a:nth-child(3) {
+  background: url(tech_bg.jpg);
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cat-index-grid a:nth-child(4) {
+  background: url(movies_bg.jpg);
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cat-index-grid a:nth-child(5) {
+  background: url(tv_bg.jpg);
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cat-index-grid a:nth-child(6) {
+  background: url(Entertainment_4.png);
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+}
+
 .index-grid-ele {
   width: 7em;
   height: 4em;
-  background: #ff8426;
   text-decoration: none;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: center;
   padding: 2em;
-  color: #f2eee3;
+  color: #ff8426;
   font-size: 2em;
-  font-weight: 800;
+  font-weight: 900;
+  position: relative;
 }
 
 .index-grid-ele:hover {

@@ -3,7 +3,7 @@
 <div class="index-container">
   <div class="grid_1">
     <%= link_to article_path(@top_article.id) do %>
-      <%= image_tag @top_article.image.downcase, class:'cover-img' %>
+      <%= image_tag @top_article.image, class:'cover-img' %>
 
       <div class="trend">
         <span>Most Voted</span>
