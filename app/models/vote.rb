@@ -6,10 +6,10 @@ class Vote < ApplicationRecord
   belongs_to :article, dependent: :destroy
 
   def self.most_voted
-    articles_votes = Vote.group(:article_id).count
-    article_max_vote_id = articles_votes.key(articles_votes.values.max)
-    if article_max_vote_id
-      Article.find(article_max_vote_id)
+    total_votes = Vote.group(:article_id).count
+    max_vote_id = total_votes.key(total_votes.values.max)
+    if max_vote_id
+      Article.find(max_vote_id)
     else
       Article.last
     end
