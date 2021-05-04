@@ -17,6 +17,25 @@ RSpec.describe Article, type: :model do
       User.create(id: 12, name: 'Angel')
     end
 
+    it 'should not save an article with a title less than 5 characters' do
+      @article = Article.create(author_id: 12, category_id: 2, title: 'Test', text: 'This is a test',
+                                image: '123456.jpg')
+      expect(@article).not_to be_valid
+    end
+
+    it 'should not save an article with a text less than 10 characters' do
+      @article = Article.create(author_id: 12, category_id: 2, title: 'Test for Article Model', text: 'This',
+                                image: '123456.jpg')
+      expect(@article).not_to be_valid
+    end
+  end
+
+  context 'with missing params' do
+    before do
+      Category.create(id: 3, name: 'TV', priority: 3)
+      User.create(id: 13, name: 'Gabriel')
+    end
+
     it 'should not save an article without an author' do
       @article = Article.create(category_id: 2, title: 'Test for Article Model', text: 'This is a test',
                                 image: '123456.jpg')
@@ -34,20 +53,8 @@ RSpec.describe Article, type: :model do
       expect(@article).not_to be_valid
     end
 
-    it 'should not save an article with a title less than 5 characters' do
-      @article = Article.create(author_id: 12, category_id: 2, title: 'Test', text: 'This is a test',
-                                image: '123456.jpg')
-      expect(@article).not_to be_valid
-    end
-
     it 'should not save an article without text' do
       @article = Article.create(author_id: 12, category_id: 2, title: 'This is a test', image: '123456.jpg')
-      expect(@article).not_to be_valid
-    end
-
-    it 'should not save an article with a text less than 10 characters' do
-      @article = Article.create(author_id: 12, category_id: 2, title: 'Test for Article Model', text: 'This',
-                                image: '123456.jpg')
       expect(@article).not_to be_valid
     end
 

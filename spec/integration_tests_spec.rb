@@ -15,7 +15,7 @@ RSpec.describe 'App Integration', type: :system do
     it 'allows user to log in after sign up' do
       visit root_path
       click_on 'Log In'
-      fill_in "Enter your name", with: 'Alexis'
+      fill_in 'Enter your name', with: 'Alexis'
       click_on 'Enter'
       expect(page).to have_content('Alexis')
     end
@@ -26,7 +26,7 @@ RSpec.describe 'App Integration', type: :system do
       visit root_path
       click_on 'All Categories'
       click_on 'New Category'
-      fill_in "Name", with: 'Sports'
+      fill_in 'Name', with: 'Sports'
       select '1', from: 'Priority'
       click_on 'Create Category'
       click_on 'All Categories'
@@ -35,8 +35,8 @@ RSpec.describe 'App Integration', type: :system do
       fill_in "What's your name?", with: 'Arturo'
       click_on 'Create User'
       click_on 'New Article'
-      fill_in "Title", with: 'Tests made with Capybara'
-      fill_in "Text", with: 'Test for creating articles and votes'
+      fill_in 'Title', with: 'Tests made with Capybara'
+      fill_in 'Text', with: 'Test for creating articles and votes'
       select 'Sports', from: 'Category'
       select 'Sports_1', from: 'Image'
       click_on 'Create Article'
@@ -52,7 +52,7 @@ RSpec.describe 'App Integration', type: :system do
       click_on 'All Categories'
       click_on 'Sports'
       click_on 'Watch all the article'
-      click_on "Vote!"
+      click_on 'Vote!'
       expect(page).to have_content('Tests made with Capybara')
       click_on 'Sign Out'
     end
