@@ -13,6 +13,8 @@ gem 'pg'
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.0'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -22,6 +24,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
+# Install wdm Gem if the platform is Windows
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 # gem 'bcrypt', '~> 3.1.7'
 gem 'hirb'
 # Use Active Storage variant
