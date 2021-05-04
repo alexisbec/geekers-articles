@@ -29,9 +29,19 @@ RSpec.describe Article, type: :model do
       expect(@article).not_to be_valid
     end
 
+    it 'should not save an article without a title' do
+      @article = Article.create(author_id: 12, category_id: 2, text: 'This is a test', image: '123456.jpg')
+      expect(@article).not_to be_valid
+    end
+
     it 'should not save an article with a title less than 5 characters' do
       @article = Article.create(author_id: 12, category_id: 2, title: 'Test', text: 'This is a test',
                                 image: '123456.jpg')
+      expect(@article).not_to be_valid
+    end
+
+    it 'should not save an article without text' do
+      @article = Article.create(author_id: 12, category_id: 2, title: 'This is a test', image: '123456.jpg')
       expect(@article).not_to be_valid
     end
 

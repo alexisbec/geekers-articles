@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   context 'with correct params' do
     before do
-      @user = User.create(name: 'Peter Parker')
+      @user = User.create(name: 'Peter')
     end
 
     it 'creates a user' do
@@ -11,16 +11,18 @@ RSpec.describe User, type: :model do
     end
 
     it 'reads a user' do
-      expect(User.find_by(name: 'Peter Parker')).to eq(@user)
+      expect(User.find_by(name: 'Peter')).to eq(@user)
     end
   end
 
   context 'with incorrect params' do
-    before do
+    it 'cannot create a user with a short name' do
       @user = User.create(name: 'He')
+      expect(@user).not_to be_valid
     end
 
-    it 'cannot create a user' do
+    it 'cannot create a user with a long name' do
+      @user = User.create(name: 'Uvuvwevwevwe Onyetenyevwe Ugwemuhwem Osas')
       expect(@user).not_to be_valid
     end
   end

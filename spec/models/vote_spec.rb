@@ -13,9 +13,14 @@ RSpec.describe Vote, type: :model do
   end
 
   context 'with incorrect params' do
-    it 'creates a vote' do
+    it 'will not be created without an article_id' do
       User.create(id: 7, name: 'Victor')
-      @vote = Vote.create(id: 3, user_id: 7, article_id: 10)
+      @vote = Vote.create(id: 3, user_id: 7)
+      expect(@vote).not_to be_valid
+    end
+
+    it 'will not be created without a user_id' do
+      @vote = Vote.create(id: 3, article_id: 10)
       expect(@vote).not_to be_valid
     end
   end
