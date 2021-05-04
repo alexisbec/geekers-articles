@@ -311,6 +311,14 @@ option {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4em;
+  min-height: 80vh;
+}
+
+.cat-index-conditional {
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cat-index-grid a:nth-child(1) {

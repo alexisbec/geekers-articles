@@ -35,7 +35,7 @@ You can watch this [video](https://www.loom.com/share/fb6a352fd63d409fb41e14a27b
 
 ## Live Demo
 
-You can visit [here](https://quiet-savannah-71711.herokuapp.com/) our app.
+You can visit [here](https://quiet-savannah-71711.herokuapp.com) our app.
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ To get a local copy up and running follow these simple example steps:
 ## Usage
 ### Heroku
 
-- Open this [link](https://fast-wildwood-38105.herokuapp.com) in your browser
+- Open this [link](https://quiet-savannah-71711.herokuapp.com) in your browser
 
 ### Local
 
@@ -78,7 +78,7 @@ To get a local copy up and running follow these simple example steps:
 ### Run tests
 
 ```
-    rpsec --format documentation
+    rspec --format documentation
 ```
 
 ## Author

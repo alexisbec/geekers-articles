@@ -1,0 +1,29 @@
+<div class="form">
+  <%= form_with(model: @category) do |form| %>
+  <% if @category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% @category.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, placeholder: 'Name', class: 'form-input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :priority, class: 'form-label' %>
+    <%= select_tag "category[#{:priority}]", options_for_select([1, 2, 3, 4, 5, 6]), include_blank: true, class: 'select-input' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Create Category', class: 'btn-1' %>
+  </div>
+  <% end %>
+</div>

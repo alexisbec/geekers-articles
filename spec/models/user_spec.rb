@@ -24,4 +24,9 @@ RSpec.describe User, type: :model do
       expect(@user).not_to be_valid
     end
   end
+
+  context 'associations' do
+    it { should have_many(:articles) }
+    it { should have_many(:votes) }
+  end
 end

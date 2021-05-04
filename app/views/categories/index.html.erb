@@ -1,7 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<div class="cat-index-grid">
-  <% @categories.each do | category | %>
-    <%= link_to category.name, category_path(category.id), class: "index-grid-ele" %>
-  <% end %>
-</div>
+<% if @categories.exists? %>
+  <div class="cat-index-grid">
+    <% @categories.each do | category | %>
+      <%= link_to category.name, category_path(category.id), class: "index-grid-ele" %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="cat-index-conditional">
+    <%= link_to 'New Category', new_category_path, class: 'btn-1' %>
+  </div>
+<% end %>
