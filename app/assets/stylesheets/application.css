@@ -322,42 +322,42 @@ option {
 }
 
 .cat-index-grid a:nth-child(1) {
-  background: url(sports_bg.png);
+  background: url(Sports_1.png);
   background-size: cover;
   object-fit: cover;
   object-position: center;
 }
 
 .cat-index-grid a:nth-child(2) {
-  background: url(videogames_bg.jpg);
+  background: url(Videogames_1.png);
   background-size: cover;
   object-fit: cover;
   object-position: center;
 }
 
 .cat-index-grid a:nth-child(3) {
-  background: url(tech_bg.jpg);
+  background: url(Technology_1.png);
   background-size: cover;
   object-fit: cover;
   object-position: center;
 }
 
 .cat-index-grid a:nth-child(4) {
-  background: url(movies_bg.jpg);
+  background: url(Movies_1.png);
   background-size: cover;
   object-fit: cover;
   object-position: center;
 }
 
 .cat-index-grid a:nth-child(5) {
-  background: url(tv_bg.jpg);
+  background: url(TV_1.png);
   background-size: cover;
   object-fit: cover;
   object-position: center;
 }
 
 .cat-index-grid a:nth-child(6) {
-  background: url(Entertainment_4.png);
+  background: url(Entertainment_1.png);
   background-size: cover;
   object-fit: cover;
   object-position: center;
