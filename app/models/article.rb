@@ -3,7 +3,7 @@ class Article < ApplicationRecord
   validates :text, presence: true, length: { minimum: 10 }
   validates :image, presence: true
 
-  belongs_to :author, class_name: 'User'
+  belongs_to :author, foreign_key: 'author_id', class_name: 'User'
   belongs_to :category, class_name: 'Category'
   has_many :votes, dependent: :destroy
 end

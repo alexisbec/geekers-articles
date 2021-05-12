@@ -32,6 +32,24 @@ div.actions {
 
 #notice {
   color: green;
+  z-index: 100000;
+  position: absolute;
+  top: 5em;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+
+#danger {
+  color: red;
+  z-index: 100000;
+  position: absolute;
+  top: 5em;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
 }
 
 .field_with_errors {

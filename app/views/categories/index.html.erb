@@ -6,7 +6,9 @@
       <%= link_to category.name, category_path(category.id), class: "index-grid-ele" %>
     <% end %>
   </div>
-<% else %>
+<% end %>
+
+<% if categories_index(@categories) %>
   <div class="cat-index-conditional">
     <%= link_to 'New Category', new_category_path, class: 'btn-1' %>
   </div>

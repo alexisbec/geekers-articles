@@ -17,6 +17,7 @@ In this project I:
 - Used scopes to make more efficient database queries
 - Created models, views, and controllers for users, articles, and categories
 - Used Rspec to test model validations and associations
+- Implemented integration tests with Capybara
 - Added a unique vote or unvote button for each article with a user
 
 # Application Screenshot
@@ -24,7 +25,7 @@ In this project I:
 
 ## Video
 
-You can watch this [video](https://www.loom.com/share/fb6a352fd63d409fb41e14a27bab178a) where I am explaining all the functionality of the app.
+You can watch this [video](https://www.loom.com/share/e2f7f441e1404c5faaa92163f6048b29) where I am explaining all the functionality of the app.
 
 ## Built With
 
@@ -35,7 +36,7 @@ You can watch this [video](https://www.loom.com/share/fb6a352fd63d409fb41e14a27b
 
 ## Live Demo
 
-You can visit [here](https://quiet-savannah-71711.herokuapp.com) our app.
+You can visit [here](https://fathomless-escarpment-63145.herokuapp.com/) our app.
 
 ## Getting Started
 
@@ -56,7 +57,7 @@ To get a local copy up and running follow these simple example steps:
 ## Usage
 ### Heroku
 
-- Open this [link](https://quiet-savannah-71711.herokuapp.com) in your browser
+- Open this [link](https://fathomless-escarpment-63145.herokuapp.com/) in your browser
 
 ### Local
 
@@ -80,6 +81,11 @@ To get a local copy up and running follow these simple example steps:
 ```
     rspec --format documentation
 ```
+
+In this project there are two different types of tests:
+
+- Integration Tests made with Capybara (You will need a Chrome browser for these tests to work.)
+- Unit Tests made with Rspec
 
 ## Author
 
