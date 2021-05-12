@@ -263,13 +263,13 @@ option {
 /* ---------- Articles Show ---------- */
 
 .art-show-body {
-  min-height: 100vh;
+  min-height: 150vh;
   width: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 5em;
+  margin: 5em 0;
 }
 
 .article-text {
