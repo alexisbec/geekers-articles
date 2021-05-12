@@ -8,7 +8,7 @@
   </div>
 <% end %>
 
-<% if @categories.count < 6 %>
+<% if categories_index(@categories) %>
   <div class="cat-index-conditional">
     <%= link_to 'New Category', new_category_path, class: 'btn-1' %>
   </div>

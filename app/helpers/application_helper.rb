@@ -7,4 +7,12 @@ module ApplicationHelper
       link_to('Vote!', article_vote_path(article_id: article.id), method: :post)
     end
   end
+
+  def categories_index(categories)
+    if categories.count < 6
+      true
+    else
+      false
+    end
+  end
 end
