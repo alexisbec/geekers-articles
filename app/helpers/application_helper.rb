@@ -9,10 +9,6 @@ module ApplicationHelper
   end
 
   def categories_index(categories)
-    if categories.count < 6
-      true
-    else
-      false
-    end
+    categories.count < 6
   end
 end

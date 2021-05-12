@@ -42,7 +42,10 @@ You can visit [here](https://fathomless-escarpment-63145.herokuapp.com/) our app
 
 To get a local copy up and running follow these simple example steps:
 
-- Clone this repository.
+- Clone this repository with:
+```
+    git clone --depth 1 https://github.com/alexisbec/lifestyle-articles.git
+```
 - Open the project folder where the repository was downloaded.
 - In your terminal, run the command `bundle install`. This will install all the required dependencies.
 - Thereafter, run the migrations. To do this, while in the project root folder, run the command: `rails db:migrate`.

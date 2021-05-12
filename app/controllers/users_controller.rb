@@ -25,7 +25,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: 'User was successfully created.'
     else
-      flash.now[:notice] = "User is already registered"
+      flash.now[:notice] = 'User is already registered'
       render :new, status: :unprocessable_entity
     end
   end
