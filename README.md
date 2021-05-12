@@ -17,6 +17,7 @@ In this project I:
 - Used scopes to make more efficient database queries
 - Created models, views, and controllers for users, articles, and categories
 - Used Rspec to test model validations and associations
+- Implemented integration tests with Capybara
 - Added a unique vote or unvote button for each article with a user
 
 # Application Screenshot
@@ -80,6 +81,11 @@ To get a local copy up and running follow these simple example steps:
 ```
     rspec --format documentation
 ```
+
+In this project there are two different types of tests:
+
+- Integration Tests made with Capybara (You will need a Chrome browser for these tests to work.)
+- Unit Tests made with Rspec
 
 ## Author
 
