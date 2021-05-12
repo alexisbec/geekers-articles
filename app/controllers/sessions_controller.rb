@@ -13,8 +13,8 @@ class SessionsController < ApplicationController
       flash[:notice] = "Welcome #{@user.name}"
       redirect_to root_path
     else
-      render :new
       flash.now[:notice] = "User is not registered"
+      render :new, status: :unprocessable_entity
     end
   end
 

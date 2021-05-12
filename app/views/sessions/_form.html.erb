@@ -1,4 +1,16 @@
 <%= form_for(:session, url: sessions_path, method: 'POST' ) do |form| %>
+  <% if flash.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(flash.count, "error") %> prohibited this user from log in:</h2>
+
+      <ul>
+        <% flash.each do |type, message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="field">
     <%= form.label :name, class: 'form-label' %>
     <%= form.text_field :user, placeholder: "Enter your name", class: 'form-input' %>
