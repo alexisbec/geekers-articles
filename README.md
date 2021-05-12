@@ -24,7 +24,7 @@ In this project I:
 
 ## Video
 
-You can watch this [video](https://www.loom.com/share/fb6a352fd63d409fb41e14a27bab178a) where I am explaining all the functionality of the app.
+You can watch this [video](https://www.loom.com/share/e2f7f441e1404c5faaa92163f6048b29) where I am explaining all the functionality of the app.
 
 ## Built With
 
@@ -35,7 +35,7 @@ You can watch this [video](https://www.loom.com/share/fb6a352fd63d409fb41e14a27b
 
 ## Live Demo
 
-You can visit [here](https://quiet-savannah-71711.herokuapp.com) our app.
+You can visit [here](https://fathomless-escarpment-63145.herokuapp.com/) our app.
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ To get a local copy up and running follow these simple example steps:
 ## Usage
 ### Heroku
 
-- Open this [link](https://quiet-savannah-71711.herokuapp.com) in your browser
+- Open this [link](https://fathomless-escarpment-63145.herokuapp.com/) in your browser
 
 ### Local
 
