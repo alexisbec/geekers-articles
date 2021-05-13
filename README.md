@@ -25,7 +25,7 @@ In this project I:
 
 ## Video
 
-You can watch this [video](https://www.loom.com/share/e2f7f441e1404c5faaa92163f6048b29) where I am explaining all the functionality of the app.
+You can watch this [video](https://www.loom.com/share/97983c1977874bc08f764794843fa1fd) where I am explaining all the functionality of the app.
 
 ## Built With
 
