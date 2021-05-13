@@ -36,7 +36,7 @@ You can watch this [video](https://www.loom.com/share/97983c1977874bc08f76479484
 
 ## Live Demo
 
-You can visit [here](https://fathomless-escarpment-63145.herokuapp.com/) our app.
+You can visit [here](https://young-gorge-05499.herokuapp.com/) our app.
 
 ## Getting Started
 
@@ -82,7 +82,7 @@ To get a local copy up and running follow these simple example steps:
 ## Usage
 ### Heroku
 
-- Open this [link](https://fathomless-escarpment-63145.herokuapp.com/) in your browser
+- Open this [link](https://young-gorge-05499.herokuapp.com/) in your browser
 
 ### Local
 
