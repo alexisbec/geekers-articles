@@ -86,3 +86,5 @@ production:
   database: Lifestyle_production
   username: postgres
   password: abc123
+  # username: Lifestyle
+  # password: <%= ENV['LIFESTYLE_DATABASE_PASSWORD'] %>
