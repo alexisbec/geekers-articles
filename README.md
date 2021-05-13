@@ -46,15 +46,32 @@ To get a local copy up and running follow these simple example steps:
 ```
     git clone --depth 1 https://github.com/alexisbec/lifestyle-articles.git
 ```
-- Open the project folder where the repository was downloaded.
-- In your terminal, run the command `yarn install --check-files` to install all the yarn dependencies of the project.
-- After that, run the command `bundle install`. This will install all the required dependencies.
-- Start the postgres database server and then run `rails db:create` to start the database.
-- Run the migrations. To do this, run the command: `rails db:migrate`.
-- Start the local server with `rails s` and then visit *localhost:3000*.
-- Visit the *All Categories* page and start creating the categories with the *New Category* button.
-- After creating all the categories you can now create your articles.
-
+- Open the project folder where the repository was downloaded in your favourite editor.
+- First you have to install all the yarn dependencies with:
+```
+    yarn install --check-files
+```
+- After that, you have to install all the project dependencies:
+```
+    bundle install
+```
+- Start the postgres database server and setup the database:
+```
+    rails db:create
+    rails db:migrate
+```
+- Then you have to populate the app with: 
+```
+    rails db:seed
+```
+- Start the local server:
+```
+    rails s
+```
+- Now you can open your favorite web-browser and visit:
+```
+    http://localhost:3000
+```
 
 ## Prerequisites
 
