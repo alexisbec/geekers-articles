@@ -325,7 +325,7 @@ option {
 .index-cat-title {
   font-size: 2.3em;
   color: #ff8426;
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 0.2em 0.4em;
   font-family: 'Roboto Slab', serif;
   font-weight: 900;
@@ -481,7 +481,6 @@ option {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
-
 
 .grid-row-2 {
   max-height: 40vh;
