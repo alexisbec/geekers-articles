@@ -413,18 +413,22 @@ option {
 
 .cat-show-grid {
   margin-top: 10vh;
-  height: 80vh;
+  max-height: 80vh;
 }
 
 .grid-row-1 {
-  height: 40vh;
+  max-height: 40vh;
   background-color: red;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid-row-1 text {
+  display: none;
+}
+
 .grid-row-2 {
-  height: 40vh;
+  max-height: 40vh;
   background-color: green;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

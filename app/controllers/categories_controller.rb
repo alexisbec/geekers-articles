@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  include CategoriesHelper
+
   def index
     @categories = Category.all
   end
@@ -20,11 +22,8 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @category = Category.includes(:articles).find(params[:id])
-    @articles = @category.articles.includes(:votes).includes(:author)
-    @last_four = @articles.last(4)
-    @first_two = @last_four.first(2)
-    @last_two = @articles.last(2)
+    last_two_art(params[:id])
+    first_two_art(params[:id])
   end
 
   private
