@@ -65,29 +65,19 @@ nav {
 }
 
 .title {
-  margin-top: 4.5em;
   color: #785e4d;
   font-size: 3em;
 }
 
 /* ---------- Forms ---------- */
 
-.form {
-  margin-bottom: 3em;
-}
-
-.body-forms {
+.body-form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 90vh;
-  margin-bottom: 8px;
-}
-
-.form-title {
-  color: #785e4d;
-  font-size: 3em;
+  height: 80vh;
+  margin: 40vh 0;
 }
 
 .form-label {
@@ -448,11 +438,6 @@ option {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.user-show-title {
-  color: #785e4d;
-  font-size: 3em;
 }
 
 .user-show-grid {
