@@ -17,7 +17,7 @@
 nav {
   width: 100vw;
   height: 10vh;
-  background: #f2eee3;
+  background: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,7 +36,7 @@ nav {
 
 .nav-li a {
   text-decoration: none;
-  color: #ff8426;
+  color: #785e4d;
   margin: 0 3em;
   font-weight: 800;
   font-size: 1.3em;
@@ -45,12 +45,12 @@ nav {
 
 .btn-1 a {
   text-decoration: none;
-  color: #f2eee3;
+  color: #fff;
 }
 
 .nav-li a:hover {
   transition: 0.5s;
-  color: #785e4d;
+  color: #ff8426;
 }
 
 .logo {
@@ -67,6 +67,8 @@ nav {
 .title {
   color: #785e4d;
   font-size: 3em;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 900;
 }
 
 /* ---------- Forms ---------- */
@@ -125,7 +127,7 @@ option {
   font-size: 1.4em;
   background: #ff8426;
   font-weight: 500;
-  color: #f2eee3;
+  color: #fff;
 }
 
 .actions {
@@ -138,7 +140,7 @@ option {
   border-radius: 4px;
   border: none;
   padding: 0.7em 3em;
-  color: #f2eee3;
+  color: #fff;
   font-weight: bold;
   font-size: 1.1em;
   margin: 0.5em auto;
@@ -157,7 +159,7 @@ option {
   border: 2px solid #ff8426;
   border-radius: 4px;
   padding: 0.7em 3em;
-  color: #f2eee3;
+  color: #fff;
   font-weight: bold;
   font-size: 1em;
   margin: 5em;
@@ -177,7 +179,7 @@ option {
   border-radius: 4px;
   border: none;
   padding: 0.7em 2em;
-  color: #f2eee3;
+  color: #fff;
   font-weight: bold;
   font-size: 1em;
   text-decoration: none;
@@ -221,14 +223,15 @@ option {
   border-bottom-right-radius: 7px;
   font-size: 1.3em;
   font-weight: 700;
-  color: #f2eee3;
+  color: #fff;
 }
 
 .top-cont {
   position: absolute;
   bottom: 3em;
-  left: 3em;
+  left: 2.3em;
   z-index: 1000;
+  width: 80%;
 }
 
 .cards-holder {
@@ -240,15 +243,28 @@ option {
 
 .sec-cont {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0.5em;
   z-index: 100;
+  padding: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 90%;
 }
 
 .index-title {
-  font-size: 4em;
-  font-weight: 700;
+  font-size: 2.5em;
   color: #ff8426;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 900;
+}
+
+.index-text {
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #fff;
 }
 
 .grid_1 {
@@ -282,6 +298,21 @@ option {
   pointer-events: none;
 }
 
+.index-cat-title {
+  font-size: 2.3em;
+  color: #ff8426;
+  background-color: rgba(0, 0, 0, .4);
+  padding: 0.2em 0.4em;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 900;
+}
+
+.index-cat-text {
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 600;
+}
+
 /* ---------- Articles Show ---------- */
 
 .art-show-body {
@@ -301,7 +332,7 @@ option {
 
 .article-text {
   font-size: 1.4em;
-  color: #f2eee3;
+  color: #fff;
   font-weight: 600;
   margin: 4em 0;
   width: 45em;
@@ -399,6 +430,7 @@ option {
   padding: 2em;
   color: #ff8426;
   font-size: 2em;
+  font-family: 'Roboto Slab', serif;
   font-weight: 900;
   position: relative;
   transition: 0.5s;
@@ -414,22 +446,19 @@ option {
 .cat-show-grid {
   margin-top: 10vh;
   max-height: 80vh;
+  background-image: linear-gradient(125deg, #fafafa 22.22%, #fff 22.22%, #fff 50%, #fafafa 50%, #fafafa 72.22%, #fff 72.22%, #fff 100%);
+  background-size: 10.99px 15.69px;
 }
 
 .grid-row-1 {
   max-height: 40vh;
-  background-color: red;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
-.grid-row-1 text {
-  display: none;
-}
 
 .grid-row-2 {
   max-height: 40vh;
-  background-color: green;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -440,6 +469,22 @@ option {
   width: 100%;
   background-size: cover;
   height: 40vh;
+}
+
+.cat-art-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  text-align: center;
+}
+
+.cat-art-title {
+  color: #785e4d;
+  font-size: 1.3em;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 900;
 }
 
 /* ---------- Users Show ---------- */
@@ -481,7 +526,8 @@ option {
 
 .art-title {
   font-size: 1.5em;
-  font-weight: 600;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 900;
   color: #994708;
   margin-bottom: 5em;
 }
@@ -528,7 +574,7 @@ footer div {
 }
 
 .contact p:last-child {
-  color: #f2eee3;
+  color: #fff;
   font-weight: 600;
   font-size: 1.1em;
 }

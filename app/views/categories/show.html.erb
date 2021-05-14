@@ -1,8 +1,11 @@
 <div class="cat-show-grid">
   <div class="grid-row-1">
     <% @last_two.reverse.each do |article| %>
-      <div class="cat-art-text">
-        <%= link_to article.title, article_path(article.id) %>
+      <div class="cat-art-info">
+        <span class="cat-art-title"><%= article.title %></span>
+        <div class="user-show-btn">
+          <%= link_to 'Watch all the article', article_path(article.id), class: 'btn-3' %>
+        </div>
       </div>
       <div class="cat-art-img">
         <%= image_tag article.image %>
@@ -14,8 +17,11 @@
       <div class="cat-art-img">
         <%= image_tag article.image %>
       </div>
-      <div>
-        <%= link_to article.title, article_path(article.id) %>
+      <div class="cat-art-info">
+        <span class="cat-art-title"><%= article.title %></span>
+        <div class="user-show-btn">
+          <%= link_to 'Watch all the article', article_path(article.id), class: 'btn-3' %>
+        </div>
       </div>
     <% end %>
   </div>
