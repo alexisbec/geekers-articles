@@ -1,21 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="user-show-body">
+  <h1 class="user-show-title">
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </h1>
 
-<h1 class="title">
-  <strong>Name:</strong>
-  <%= @user.name %>
-</h1>
-
-<% if @articles %>
-  <div class="cat-show-body">
-    <ul class="categories-ul">
-    <% @articles.each do | article | %>
-      <li class="categories-li">
-        <span class="art-title"><%= article.title %></span>
-        <span class="art-author">Written by: <%= article.author.name %></span>
-        <%= link_to "Watch all the article", article_path(article.id), class: 'btn-1' %>
-      </li>
-    <% end %>
-    </ul>
-  </div>
-
-<% end %>
+  <% if @articles %>
+    <div class="user-show-grid">
+      <% @articles.each do | article | %>
+        <div class="user-art-card">
+          <div class="user-card-img">
+            <%= image_tag article.image %>
+          </div>
+          <div class="user-card-info">
+            <span class="art-title"><%= article.title.truncate(50) %></span><br>
+            <div class="user-show-btn">
+              <%= link_to "Watch all the article", article_path(article.id), class: 'btn-3' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
