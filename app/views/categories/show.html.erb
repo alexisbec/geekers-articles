@@ -3,8 +3,11 @@
     <% @last_two.reverse.each do |article| %>
       <div class="cat-art-info">
         <span class="cat-art-category"><%= article.category.name %></span>
-        <span class="cat-art-title"><%= article.title.truncate(90) %></span>
+        <span class="cat-art-title"><%= article.title.truncate(60) %></span>
         <span class="cat-art-text"><%= article.text.truncate(90) %></span>
+        <div class="cat-art-author">
+          <strong>By: </strong><span><%= article.author.name %></span>
+        </div>
         <div class="user-show-btn">
           <%= link_to 'Watch all the article', article_path(article.id), class: 'btn-3' %>
         </div>
@@ -21,8 +24,11 @@
       </div>
       <div class="cat-art-info">
         <span class="cat-art-category"><%= article.category.name %></span>
-        <span class="cat-art-title"><%= article.title.truncate(90) %></span>
+        <span class="cat-art-title"><%= article.title.truncate(60) %></span>
         <span class="cat-art-text"><%= article.text.truncate(90) %></span>
+        <div class="cat-art-author">
+          <strong>By: </strong><span><%= article.author.name %></span>
+        </div>
         <div class="user-show-btn">
           <%= link_to 'Watch all the article', article_path(article.id), class: 'btn-3' %>
         </div>
