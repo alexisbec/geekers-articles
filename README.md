@@ -20,8 +20,16 @@ In this project I:
 - Implemented integration tests with Capybara
 - Added a unique vote or unvote button for each article with a user
 
-# Application Screenshot
-![screenshot of Geekers Page](app_screenshot.png)
+# Application Screenshots
+
+## Home Page
+![screenshot of Geekers Home](screenshot_home.png)
+
+## Categories Page
+![screenshot of Geekers Categories](screenshot_categories.png)
+
+## Articles Page
+![screenshot of Geekers Articles](screenshot_articles.png)
 
 ## Video
 
