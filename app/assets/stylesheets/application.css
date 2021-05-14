@@ -495,15 +495,23 @@ option {
   width: 100%;
   background-size: cover;
   height: 40vh;
+  cursor: pointer;
 }
 
 .cat-art-info {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
   padding: 2em;
-  text-align: center;
+}
+
+.cat-art-category {
+  font-size: 1.3em;
+  font-weight: 800;
+  color: #785e4d;
+  border-bottom: #ff8426 solid 2px;
+  margin-bottom: 1em;
 }
 
 .cat-art-title {
@@ -511,6 +519,12 @@ option {
   font-size: 1.3em;
   font-family: 'Roboto Slab', serif;
   font-weight: 900;
+}
+
+.cat-art-text {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #ff8426;
 }
 
 /* ---------- Users Show ---------- */
