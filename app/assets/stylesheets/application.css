@@ -80,6 +80,14 @@ nav {
   margin: 40vh 0;
 }
 
+.user-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20vh 0;
+}
+
 .form-label {
   color: #785e4d;
   font-size: 1.5em;
