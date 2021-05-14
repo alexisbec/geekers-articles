@@ -12,4 +12,12 @@ module CategoriesHelper
     last_four = articles.last(4)
     @first_two = last_four.first(2)
   end
+
+  def categories_show(first_two, last_two)
+    if first_two == last_two
+      true
+    else
+      false
+    end
+  end
 end
