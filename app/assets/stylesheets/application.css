@@ -159,12 +159,13 @@ option {
   border: 2px solid #ff8426;
   border-radius: 4px;
   padding: 0.7em 3em;
-  color: #fff;
+  color: #ff8426;
   font-weight: bold;
   font-size: 1em;
   margin: 5em;
   text-decoration: none;
   transition: 0.5s;
+  background: none;
 }
 
 .btn-2:hover {
@@ -172,6 +173,7 @@ option {
   cursor: pointer;
   transition: 0.5s;
   font-size: 1.2em;
+  color: #fff;
 }
 
 .btn-3 {
@@ -191,6 +193,28 @@ option {
   cursor: pointer;
   transition: 0.5s;
   font-size: 0.9em;
+}
+
+.btn-4 {
+  border: 2px solid #ff8426;
+  border-radius: 4px;
+  padding: 0.7em 3em;
+  color: #ff8426;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 5em;
+  text-decoration: none;
+  transition: 0.5s;
+  background: none;
+  position: absolute;
+}
+
+.btn-4:hover {
+  background-color: #ff8426;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 1.2em;
+  color: #fff;
 }
 
 .art-opt {
@@ -325,6 +349,10 @@ option {
   margin: 10vh 0 20vh 0;
 }
 
+.art-show-body h1 {
+  color: #ff8426;
+}
+
 .art-show-img img {
   width: 60em;
   height: auto;
@@ -332,7 +360,7 @@ option {
 
 .article-text {
   font-size: 1.4em;
-  color: #fff;
+  color: #785e4d;
   font-weight: 600;
   margin: 4em 0;
   width: 45em;
@@ -446,8 +474,6 @@ option {
 .cat-show-grid {
   margin-top: 10vh;
   max-height: 80vh;
-  background-image: linear-gradient(125deg, #fafafa 22.22%, #fff 22.22%, #fff 50%, #fafafa 50%, #fafafa 72.22%, #fff 72.22%, #fff 100%);
-  background-size: 10.99px 15.69px;
 }
 
 .grid-row-1 {
@@ -550,6 +576,7 @@ footer {
   bottom: 0 !important;
   padding: 0.3em 0;
   z-index: 100;
+  font-family: 'Roboto Slab', serif;
 }
 
 footer div {
@@ -577,4 +604,5 @@ footer div {
   color: #fff;
   font-weight: 600;
   font-size: 1.1em;
+  font-family: 'Lato', sans-serif;
 }
