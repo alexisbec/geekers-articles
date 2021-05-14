@@ -1,11 +1,22 @@
-<div class="cat-show-body">
-  <ul class="categories-ul">
-  <% @articles.each do | article | %>
-    <li class="categories-li">
-      <span class="art-title"><%= article.title %></span>
-      <span class="art-author">Written by: <%= article.author.name %></span>
-      <%= link_to "Watch all the article", article_path(article.id), class: 'btn-1' %>
-    </li>
-  <% end %>
-  </ul>
+<div class="cat-show-grid">
+  <div class="grid-row-1">
+    <%= @last_two.reverse.each do |article| %>
+      <div class="cat-art-text">
+        <%= link_to article.title, article_path(article.id) %>
+      </div>
+      <div class="cat-art-img">
+        <%= image_tag article.image %>
+      </div>
+    <% end %>
+  </div>
+  <div class="grid-row-2">
+    <%= @first_two.reverse.each do |article| %>
+      <div class="cat-art-img">
+        <%= image_tag article.image %>
+      </div>
+      <div>
+        <%= link_to article.title, article_path(article.id) %>
+      </div>
+    <% end %>
+  </div>
 </div>

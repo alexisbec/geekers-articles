@@ -21,10 +21,11 @@ class CategoriesController < ApplicationController
 
   def show
     @category = Category.includes(:articles).find(params[:id])
-    @articles = @category.articles.includes(:votes).includes(:author).order(created_at: 'DESC')
+    @articles = @category.articles.includes(:votes).includes(:author)
+    @last_four = @articles.last(4)
+    @first_two = @last_four.first(2)
+    @last_two = @articles.last(2)
   end
-
-  def edit; end
 
   private
 

@@ -16,14 +16,14 @@
 
 nav {
   width: 100vw;
-  height: 5em;
+  height: 10vh;
   background: #f2eee3;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
-  z-index: 100000;
+  top: 0 !important;
+  z-index: 10000;
 }
 
 .nav-ul {
@@ -181,7 +181,7 @@ option {
 /* ---------- Articles Index ---------- */
 
 .index-container {
-  margin-top: 5em !important;
+  margin-top: 10vh;
   width: 100vw;
   margin-bottom: 20em;
 }
@@ -225,7 +225,7 @@ option {
   position: absolute;
   bottom: 0;
   left: 0.5em;
-  z-index: 1000;
+  z-index: 100;
 }
 
 .index-title {
@@ -237,13 +237,14 @@ option {
 .grid_1 {
   position: relative;
   background-size: cover;
-  height: 93vh;
+  height: 80vh;
 }
 
 .grid_2 {
   width: auto;
   height: auto;
   position: relative;
+  margin-bottom: 5em;
 }
 
 .grid_2 img {
@@ -306,16 +307,12 @@ option {
 
 /* ---------- Categories Index ---------- */
 
-.cat-title {
-  margin-top: 2em !important;
-}
-
 .cat-index-grid {
-  margin: 8.5em 0 110px;
+  margin: 8em 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 4em;
-  min-height: 80vh;
+  min-height: 70vh;
 }
 
 .cat-index-conditional {
@@ -389,27 +386,31 @@ option {
 
 /* ---------- Categories Show ---------- */
 
-.cat-show-body {
-  width: 50vw;
-  min-height: 55vh;
-  margin-top: 5em;
-  padding: 0;
+.cat-show-grid {
+  margin-top: 10vh;
+  height: 80vh;
 }
 
-.categories-ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.grid-row-1 {
+  height: 40vh;
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
-.categories-li {
-  margin: 2em 0 5em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+.grid-row-2 {
+  height: 40vh;
+  background-color: green;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cat-art-img img {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  background-size: cover;
+  height: 40vh;
 }
 
 /* ---------- Users Show ---------- */
@@ -431,14 +432,16 @@ option {
 
 footer {
   width: 100vw;
+  height: 10vh;
   background: #785e4d;
   color: #ff8426;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
-  bottom: 0;
+  position: fixed;
+  bottom: 0 !important;
   padding: 0.3em 0;
+  z-index: 100;
 }
 
 footer div {
