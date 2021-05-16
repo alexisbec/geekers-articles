@@ -323,12 +323,12 @@ option {
 }
 
 .index-cat-title {
-  font-size: 2.3em;
-  color: #ff8426;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 0.2em 0.4em;
+  font-size: 1.7em;
+  color: #fff;
+  padding: 0.2em 0;
   font-family: 'Roboto Slab', serif;
   font-weight: 900;
+  border-bottom: #dbd824 solid 4px;
 }
 
 .index-cat-text {
