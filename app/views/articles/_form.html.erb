@@ -1,0 +1,44 @@
+<div class="form">
+  <%= form_with(model: article) do |form| %>
+  <% if article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+        <% article.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% categories = Category.all %>
+  <div class="field">
+    <%= form.label :title, class: 'form-label' %>
+    <%= form.text_field :title, class: 'form-input' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :text, class: 'form-label' %>
+    <%= form.text_area :text, class: 'text-input' %>
+  </div>
+
+  <div class="field">
+    <%= form.hidden_field :author_id, value: current_user.id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id, class: 'form-label' %>
+    <%= select_tag "article[#{:category_id}]", options_from_collection_for_select(categories, "id", "name"), include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image, class: 'form-label' %>
+    <%= select_tag "article[#{:image}]", options_for_select(["Sports_1", "Sports_2", "Sports_3", "Sports_4", "Videogames_1", "Videogames_2", "Videogames_3", "Videogames_4", "Technology_1", "Technology_2", "Technology_3", "Technology_4", "Movies_1", "Movies_2", "Movies_3", "Movies_4", "TV_1", "TV_2", "TV_3", "TV_4", "Entertainment_1", "Entertainment_2", "Entertainment_3", "Entertainment_4"]), include_blank: true, class: 'select-input' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Create Article', class: 'btn-1' %>
+  </div>
+  <% end %>
+</div>

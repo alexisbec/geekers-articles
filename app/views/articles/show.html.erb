@@ -1,0 +1,39 @@
+<div class="art-show-body">
+  <p id="notice"><%= notice %></p>
+
+  <h1 class="title">
+    <%= @article.title %>
+  </h1>
+
+  <div class="art-show-img">
+    <%= image_tag "#{@article.image}" %>
+  </div>
+
+  <p class="article-text">
+    <%= @article.text %>
+  </p>
+
+  <div class="article-info">
+    <p class="author">
+      <strong>Author:</strong>
+      <span><%= @article.author.name %></span>
+    </p>
+
+    <p class="category">
+      <strong>Category:</strong>
+      <span><%= @article.category.name %></span>
+    </p>
+  </div>
+
+  <% if logged_in? %>
+    <span class="btn-1"><%= vote_btn(@article) %></span>
+  <% end %>
+
+  <div class="art-opt">
+    <%= link_to 'Back', categories_path, class: 'btn-2' %>
+
+    <% if current_user == @article.author %>
+      <%= link_to 'Edit', edit_article_path(@article), class: 'btn-2' %>
+    <% end %>
+  </div>
+</div>

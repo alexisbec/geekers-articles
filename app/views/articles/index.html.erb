@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<div class="index-container">
+  <% if @top_article %>
+    <div class="grid_1">
+      <%= link_to article_path(@top_article.id) do %>
+        <%= image_tag @top_article.image, class:'cover-img' %>
+
+        <div class="trend">
+          <span>Most Voted</span>
+        </div>
+        <div class="top-cont">
+          <h3 class="index-title">
+            <%= @top_article.title %>
+          </h3>
+          <p class="index-text">
+            <%= @top_article.text.truncate(300) %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if @home_articles %>
+    <div class="cards-holder">
+      <% @home_articles.each do |c| %>
+      <%= link_to category_path(c.id) do %>
+        <% unless c.articles.last.nil? %>
+          <div class="grid_2">
+            <%= image_tag c.articles.last.image %>
+              <div class="sec-cont">
+                <h3 class="index-cat-title">
+                  <%= c.name %>
+                </h3>
+                <p class="index-cat-text">
+                  <%= c.articles.last.text.truncate(50) %>
+                </p>
+              </div>
+          </div>
+        <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

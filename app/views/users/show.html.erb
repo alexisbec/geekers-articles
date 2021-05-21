@@ -1,0 +1,24 @@
+<div class="user-show-body">
+  <h1 class="title">
+    <strong>Name:</strong>
+    <%= @user.name %>
+  </h1>
+
+  <% if @articles %>
+    <div class="user-show-grid">
+      <% @articles.each do | article | %>
+        <div class="user-art-card">
+          <div class="user-card-img">
+            <%= image_tag article.image %>
+          </div>
+          <div class="user-card-info">
+            <span class="art-title"><%= article.title.truncate(50) %></span><br>
+            <div class="user-show-btn">
+              <%= link_to "Watch all the article", article_path(article.id), class: 'btn-3' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

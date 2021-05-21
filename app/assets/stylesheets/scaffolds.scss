@@ -1,0 +1,87 @@
+body {
+  background-image: linear-gradient(125deg, #fafafa 22.22%, #fff 22.22%, #fff 50%, #fafafa 50%, #fafafa 72.22%, #fff 72.22%, #fff 100%);
+  background-size: 10.99px 15.69px;
+  color: #333;
+  scroll-behavior: smooth;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div.field,
+div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+  z-index: 100000;
+  position: absolute;
+  top: 5em;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+
+#danger {
+  color: red;
+  z-index: 100000;
+  position: absolute;
+  top: 5em;
+  width: 100%;
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 1rem;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+label {
+  display: block;
+}
